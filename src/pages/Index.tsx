@@ -1,12 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import HeroBanner from "@/components/HeroBanner";
+import CategorySelector from "@/components/CategorySelector";
+import FlashSale from "@/components/FlashSale";
+import BestSelling from "@/components/BestSelling";
+import ServiceFeatures from "@/components/ServiceFeatures";
+import { useEffect } from "react";
 
 const Index = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <HeroBanner />
+      <CategorySelector />
+      <FlashSale />
+      <BestSelling />
+      <ServiceFeatures />
     </div>
   );
 };
